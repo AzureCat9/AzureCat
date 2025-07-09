@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>AzureCat - Token</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #fff;
+      background-image: url('https://uploadkon.ir/uploads/93c209_2573fd33a0-5854-44fb-8b81-ca5872e99d55.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #slideshow-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #fff3;
+    }
+
+    #slideshow-container img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    #slideshow-container img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your existing content can go here -->
+
+  <!-- Slideshow at bottom-left -->
+  <div id="slideshow-container">
+    <img src="https://uploadkon.ir/uploads/93c209_2573fd33a0-5854-44fb-8b81-ca5872e99d55.jpeg" alt="گربه 1" class="active" />
+    <img src="https://uploadkon.ir/uploads/148209_25file-00000000888c61f7bc70ca87a1864d3f.png" alt="گربه 2" />
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('#slideshow-container img');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+
+</body>
+</html>
