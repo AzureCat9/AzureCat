@@ -1,0 +1,29 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 2rem;
+}
+
+.logo {
+    width: 120px;
+}
+
+header, section, footer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.founder-img {
+    width: 180px;
+    border-radius: 16px;
+    border: 2px solid white;
+    margin-top: 1rem;
+}
